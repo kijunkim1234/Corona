@@ -1,0 +1,22 @@
+﻿<Window x:Class="CoronaProj.mask"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoronaProj"
+        mc:Ignorable="d"
+        Title="공적마스크 조회 서비스" Height="720" Width="1280">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="640"/>
+            <ColumnDefinition Width="640"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="titleText" Margin="85,76,0,0" TextWrapping="Wrap" TextAlignment="Center" FontSize="40" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="160" Width="1110" HorizontalAlignment="Left"><Run Text="&lt; 공적마스크 조회 서비스 &gt;"/><LineBreak/><Run FontSize="20" Text="마스크 재고 현황은 실시간 업데이트가 아닙니다."/><Run FontSize="20" Text=" "/></TextBlock>
+        <TextBlock Name="resultText" HorizontalAlignment="Left" TextAlignment="Center" Margin="85,241,0,0" FontSize="35" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.069,-0.812" Grid.ColumnSpan="2" Height="275" Width="1110"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="0,613,0,0" TextWrapping="Wrap" FontSize="20" TextAlignment="Right" VerticalAlignment="Top" Height="56" Width="612"><Run Text="데이터 출처 : 한국정보화진흥원 (maskdata@nia.or.kr)"/><LineBreak/><Run Text="   "/><Run Text="공공데이터포털 (http://www.dwata.go.kr"/></TextBlock>
+        <Button Name="listButton" Content="리스트로 보기" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top" Width="188" Margin="370,482,0,0" Height="97" Click="ListButton_Click"/>
+        <Button Name="MapButton" Content="지도보기" HorizontalAlignment="Left" FontSize="25" Margin="0,482,0,0" VerticalAlignment="Top" Width="186" Height="97" Click="MapButton_Click" Grid.Column="1"/>
+        <Button Name="ExitButton" Content="종료" HorizontalAlignment="Left" FontSize="25" VerticalAlignment="Top" Width="186" Margin="85,482,0,0" Height="97" Click="ExitButton_Click"/>
+
+    </Grid>
+</Window>
